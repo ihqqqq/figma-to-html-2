@@ -46,6 +46,46 @@
     opacity: 1;
     visibility: visible;
   }
+
+  .menu-drawer {
+    position: fixed;
+    background: #406181;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+
+  /* Neu checkbox duoc check thi se hien menu */
+
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
 }
 
 /* Table */
@@ -60,5 +100,5 @@
 .hero,
 .footer,
 main {
-  /* display: none; */
+  display: none;
 }
